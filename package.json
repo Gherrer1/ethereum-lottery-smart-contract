@@ -1,0 +1,26 @@
+{
+  "name": "ethereum-lottery-smart-contract",
+  "version": "1.0.0",
+  "description": "Lottery smart contract for the Ethereum blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gherrer1/ethereum-lottery-smart-contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gherrer1/ethereum-lottery-smart-contract/issues"
+  },
+  "homepage": "https://github.com/Gherrer1/ethereum-lottery-smart-contract#readme",
+  "dependencies": {
+    "ganache-cli": "^6.0.3",
+    "mocha": "^4.0.1",
+    "solc": "^0.4.25",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3": "^1.0.0-beta.26"
+  }
+}
