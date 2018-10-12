@@ -6,6 +6,16 @@ contract Lottery {
 
     function Lottery() public {
         manager = msg.sender;
-        players = new address[](2);
+    }
+
+    function getNumPlayers() public view returns (uint) {
+        return players.length;
+    }
+
+    function enter() public payable {
+        // in wei
+        if(msg.value >= 1) {
+            players.push(msg.sender);
+        }
     }
 }
