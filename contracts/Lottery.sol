@@ -13,9 +13,13 @@ contract Lottery {
     }
 
     function enter() public payable {
-        // in wei
-        if(msg.value >= 1) {
-            players.push(msg.sender);
-        }
+        // automatically converted to appropriate amount of wei
+        require(msg.value >= .01 ether, "Must send at least .01 ether");
+        
+        players.push(msg.sender);
+    }
+
+    function pickWinner() public {
+        require(msg.sender == manager, "You must be the manager to do that.");
     }
 }
